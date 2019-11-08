@@ -66,7 +66,7 @@ res.sendFile(path.join(__dirname, 'robots.txt'));
 });
 
 
-app.use(express.static(path.join(__dirname, '/public')));
+app.use(express.static(path.join(__dirname, '/')));
 
 
 app.listen(12000, () =>{

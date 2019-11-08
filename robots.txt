@@ -1,0 +1,10 @@
+# Group 1
+User-agent: Mozilla/5.0 (X11; Linux x86_64; rv:68.0) Gecko/20100101 Firefox/68.0
+Disallow: /secretpath
+
+# Group 2
+User-agent: *
+Allow: /
+Allow: /water
+
+# RlN7SGVsbG9fdGhlcmV9Cg==
