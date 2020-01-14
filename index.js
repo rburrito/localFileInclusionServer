@@ -3,9 +3,6 @@ const app = express();
 const path = require('path');
 const fs = require('fs');
 const childProcess = require('child_process');
-const passport = require('passport');
-const localStrategy = require('passport-local');
-const sql = require('sql-client');
 
 app.get('/search', (req, res, next) => {
     const { q, file, mode } = req.query;
@@ -24,14 +21,12 @@ if(file_contents.indexOf(q)){
             }
         } else {
 	console.log('hack')
-            res.send('<h1>YOU TRYNA HACK ME BRUH?</h1>')
+            res.send('<h1>Trying to hack me?</h1>')
         }
 
     } else if(mode === 'write'){
 	console.log('write');
         fs.writeFile(path.join(__dirname, 'searchable', req.query.file), req.query.q, () => {
-            // console.log(req.query)
-            // http://localhost:3000/?q=hello%20world&file=window.js
             res.send('Query in progress!');
         });
     } 
@@ -46,8 +41,6 @@ res.send('File run '+result);
         res.status(400).send('File mode must be set!');
     }
 });
-
-
 
 app.get('/', (req,res)=>{
   res.sendFile(path.join(__dirname, 'index.html'));
