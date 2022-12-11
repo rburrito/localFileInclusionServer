@@ -12,7 +12,7 @@
   "author": "burr1t0",
   "license": "MIT",
   "dependencies": {
-    "express": "^4.17.1",
+    "express": "^4.17.3",
     "fs": "0.0.1-security",
     "nodemon": "^1.19.4",
     "path": "^0.12.7"
